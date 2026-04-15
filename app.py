@@ -528,24 +528,12 @@ def load_orchestrator(model_path: str, scaler_path: str, data_path: str,
 with st.sidebar:
     st.markdown("# The Visionary Model")
 
-    st.markdown("### System Dependencies")
 
-    model_path = st.text_input(
-        "Model Weights",
-        value="visionary_ode_model.pth",
-        help="Path to the trained .pth file",
-    )
-    scaler_path = st.text_input(
-        "Scaler Configuration",
-        value="visionary_scaler.pkl",
-        help="Path to the fitted scaler .pkl file",
-    )
-    data_path = st.text_input(
-        "Historical Dataset",
-        value="Visionary_Production_Dataset.csv",
-        help="Path to the original CSV dataset",
-    )
-
+    model_path = "visionary_ode_model.pth"
+    scaler_path = "visionary_scaler.pkl"
+    data_path = "Visionary_Production_Dataset.csv"
+        
+    
     st.markdown("### Language Model")
 
     mock_mode = st.checkbox("Run in offline mode (no API key)", value=True)
